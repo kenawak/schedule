@@ -11,6 +11,12 @@
     />
     <link rel="stylesheet" href="main.css" />
     <script defer src="script.js"></script>
+    <!-- Include flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<!-- Include flatpickr JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
   </head>
 
   <body>
@@ -31,6 +37,7 @@
           placeholder="new list name"
           aria-label="new list name"
         />
+        
         <button class="btn create" aria-label="create new list">+</button>
       </form>
     </div>
@@ -46,7 +53,6 @@
 
         <div class="new-task-creator">
             <form action="" data-new-task-form>
-               <input style="display: flex;" type="email" name="email" id="email">
                 <input 
                   type="text"
                   data-new-task-input
@@ -75,5 +81,15 @@
         </label>
       </div>
     </template>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const newTaskInput = document.getElementById("newTaskInput");
+        flatpickr(newTaskInput, {
+          enableTime: true, // Enable time selection
+          dateFormat: "Y-m-d H:i", // Define the date and time format as you prefer
+        });
+      });
+    </script>
   </body>
 </html>
