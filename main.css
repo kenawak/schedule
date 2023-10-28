@@ -25,7 +25,7 @@
 }
 #time {
   font-size: .6em;
-  color: var(--clr-dark);;
+  color: var(--clr-dark);
   padding-top: 10px;
 }
 
@@ -80,8 +80,6 @@ li{
   cursor: pointer;
   margin-bottom: 4px;
   margin-right: 5px;
-  border-radius: 5px;
-  border: solid 1px;
 }
 
 .list-name:hover {
