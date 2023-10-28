@@ -11,11 +11,8 @@
     />
     <link rel="stylesheet" href="main.css" />
     <script defer src="script.js"></script>
-    <!-- Include flatpickr CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-<!-- Include flatpickr JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   </head>
 
@@ -37,7 +34,6 @@
           placeholder="new list name"
           aria-label="new list name"
         />
-        
         <button class="btn create" aria-label="create new list">+</button>
       </form>
     </div>
@@ -77,19 +73,36 @@
       <div class="task">
         <input type="checkbox" />
         <label>
-          <span class="custom-checkbox"></span>
+          <span class="custom-checkbox"></span>   
+          <span class="task-name"></span>
+          <span class="task-datetime"></span>
         </label>
       </div>
     </template>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const newTaskInput = document.getElementById("newTaskInput");
-        flatpickr(newTaskInput, {
-          enableTime: true, // Enable time selection
-          dateFormat: "Y-m-d H:i", // Define the date and time format as you prefer
-        });
+          const datepicker = document.getElementById("datepicker");
+          const saveButton = document.getElementById("saveButton");
+          const displayDateTime = document.getElementById("displayDateTime");
+
+          // Initialize flatpickr for the date and time picker
+          flatpickr(datepicker, {
+              enableTime: true,
+              dateFormat: "Y-m-d H:i",
+          });
+
+          // Event listener for the "Save" button
+          saveButton.addEventListener("click", function () {
+              const selectedDateTime = datepicker.value;
+              if (selectedDateTime) {
+                  displayDateTime.textContent = selectedDateTime;
+              } else {
+                  displayDateTime.textContent = "No date and time selected.";
+              }
+          });
       });
+
     </script>
   </body>
 </html>
