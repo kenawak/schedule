@@ -12,15 +12,13 @@
   box-sizing: border-box;
 }
 .clock {
+  margin-top: 100px;
+  grid-area: header;
   text-align: center;
-  font-family: Arial, sans-serif;
-  display: inline-block;
-  flex-direction: row-reverse;
-  width: 100%;
-  align-items: center;
-  margin-bottom: auto;
+  font-weight: 900;
+  color: #c9c5c5;
+  letter-spacing: 2px;
 }
-
 #time {
   font-size: .6em;
 }
@@ -48,6 +46,7 @@ body {
   color: #c9c5c5;
   letter-spacing: 2px;
   margin: -0.3em 0 0.5em;
+  flex: 1;
 }
 
 .all-tasks {
@@ -59,10 +58,18 @@ body {
   line-height: 1.7;
   list-style: circle;
   padding-left: 1.1em;
-}
 
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
 .list-name {
   cursor: pointer;
+  margin-bottom: 4px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: solid 1px;
 }
 
 .list-name:hover {
@@ -171,7 +178,7 @@ form {
 
 .todo-header {
   padding: var(--spacer);
-  background: #e4e4e4;
+  background: #c9c5c5;;
   display: flex;
   align-items: center;
   justify-content: space-between;
