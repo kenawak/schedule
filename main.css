@@ -12,23 +12,27 @@
   box-sizing: border-box;
 }
 .clock {
-
   margin-left: auto;
-  margin-top: 160px;
+  margin-top: 170px;
   grid-area: header;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   text-align: center;
   font-weight: 900;
   color: #c9c5c5;
   letter-spacing: 2px;
-  margin-right: auto;
+  margin-right: 271px;
 }
 #time {
   font-size: .6em;
+  color: var(--clr-dark);;
+  padding-top: 10px;
 }
 
 #date {
   font-size: 1.0em;
   color: #666;
+  margin-bottom: 0px;
 }
 body {
   margin: 0;
