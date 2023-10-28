@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 .clock {
-  margin-top: 100px;
+  margin-top: 150px;
   grid-area: header;
   text-align: center;
   font-weight: 900;
@@ -39,13 +39,13 @@ body {
 }
 
 .title {
+  margin-top: 15px;
   grid-area: header;
   text-align: center;
   font-size: calc(7vw + 2rem);
   font-weight: 900;
   color: #c9c5c5;
   letter-spacing: 2px;
-  margin: -0.3em 0 0.5em;
   flex: 1;
 }
 
@@ -123,6 +123,7 @@ form {
 
 .new::-webkit-input-placeholder {
   opacity: 0.4;
+  color: var(--clr-dark);
 }
 
 .new:-ms-input-placeholder {
