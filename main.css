@@ -60,7 +60,14 @@ body {
   letter-spacing: 2px;
   flex: 1;
 }
-
+.download{
+ border: none;
+ background-color: #c9c5c5;
+}
+.download a{
+  text-decoration: none;
+  color: #141415;
+}
 .all-tasks {
   grid-area: lists;
 }
